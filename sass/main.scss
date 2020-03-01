@@ -1,11 +1,26 @@
-@keyframes sway {
+//KEY FRAMES
+
+@keyframes move {
   0% {
     opacity: 0;
+    transform: translateX(-10rem);
+  }
+  60% {
+    opacity: 0.7;
+    transform: translateX(-5rem);
+    transform: translateY(-3rem);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(2rem);
+    transform: translateZ(3rem);
   }
   100% {
-    opacity: 10;
+    transform: translateX(0);
+    transform: translateY(0);
   }
 }
+
 body {
   overflow-x: hidden;
   font-family: fantasy;
@@ -22,6 +37,7 @@ body {
       .caro-title {
         color: whitesmoke;
         font-size: 3rem;
+        animation: move 1s;
       }
       .btn-outline-light {
         font-size: 0.8rem;
@@ -89,6 +105,11 @@ body {
     }
   }
   #float-things {
+    .photo-gallery {
+      .item {
+        margin: 0 auto;
+      }
+    }
     .float-1 {
       margin-top: 2rem;
       position: relative;
