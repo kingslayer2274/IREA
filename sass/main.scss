@@ -163,6 +163,78 @@ body {
       }
     }
   }
+  #summary {
+    height: 55rem;
+    margin-top: 4rem;
+    background-color: #f6f6f6;
+    .main {
+      margin-top: 7rem;
+      font-size: 2.2rem;
+      font-weight: bold;
+    }
+    .sub {
+      font-size: 1.1rem;
+    }
+    .row-2 {
+      margin-top: 6rem;
+      .main-left {
+        font-size: 2.5rem;
+      }
+      .sub-left {
+        padding-bottom: 7rem;
+      }
+
+      .float-img {
+        position: relative;
+        .float-img {
+          &-1,
+          &-2,
+          &-3 {
+            position: absolute;
+            height: 15rem;
+            max-width: 18rem;
+            box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+            border-radius: 2px;
+            position: absolute;
+            z-index: 10;
+            transition: all 0.2s;
+            outline-offset: 2rem;
+          }
+          &-1:hover {
+            outline: 1.2rem solid rgba(34, 6, 13, 0.667);
+            transform: scale(1.05) translateY(-0.5rem);
+            box-shadow: 0 2.5rem 2rem rgba(0, 0, 0, 0.5);
+            z-index: 20;
+          }
+          &-2:hover {
+            outline: 1.2rem solid rgba(34, 6, 13, 0.667);
+            transform: scale(1.05) translateY(-0.5rem);
+            box-shadow: 0 2.5rem 2rem rgba(0, 0, 0, 0.5);
+            z-index: 20;
+          }
+          &-3:hover {
+            outline: 1.2rem solid rgba(34, 6, 13, 0.667);
+            transform: scale(1.05) translateY(-0.5rem);
+            box-shadow: 0 2.5rem 2rem rgba(0, 0, 0, 0.5);
+            z-index: 20;
+          }
+
+          &-1 {
+            top: 0%;
+            left: 16%;
+          }
+          &-2 {
+            top: 2rem;
+            left: 52%;
+          }
+          &-3 {
+            top: 8rem;
+            left: 25%;
+          }
+        }
+      }
+    }
+  }
   #gallery {
     .top-1,
     .top-2,
@@ -174,6 +246,12 @@ body {
       max-width: 255px;
       &:hover {
         opacity: 1;
+        transition: all 0.5s;
+      }
+    }
+    .media-icons {
+      svg:hover {
+        color: rgba(170, 88, 68, 0.667);
         transition: all 0.5s;
       }
     }
@@ -355,18 +433,24 @@ body {
       }
       .float-2 {
         margin-bottom: 3rem;
+        margin-top: 8rem;
         .img-title {
           left: 31%;
-          font-size: 1.2rem;
+          font-size: 1rem;
         }
       }
       .float-3 {
         margin-bottom: 3rem;
         .img-title {
-          font-size: 1.2rem;
+          font-size: 1rem;
           left: 29%;
         }
       }
+    }
+    #summary {
+      .main-left {
+      }
+      height: 60rem !important;
     }
     #gallery {
       .top-1,
@@ -375,11 +459,20 @@ body {
       .top-4 {
         max-width: 332px;
       }
+      .media-icons {
+        svg {
+          margin-right: 2rem !important;
+        }
+      }
       .title {
         .sub {
           padding-bottom: 5rem;
         }
       }
+    }
+    #pre-footer {
+      background-size: cover;
+      background-position: bottom;
     }
     footer {
       .col-md-3 {
